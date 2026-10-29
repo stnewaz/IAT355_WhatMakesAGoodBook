@@ -319,7 +319,7 @@ d3.select("body").selectAll(".tooltip").remove();
       const offsetY = isMobile ? 18 : 28;
       tooltip
         .style("opacity", 1)
-        .html(`<strong>${nearest.genre}</strong><br>Year: ${nearest.year}<br>Books: ${nearest.smooth.toFixed(1)}`)
+        .html(`<strong>${nearest.genre}</strong><br>Year: ${nearest.year}<br>Books: ${Math.round(nearest.smooth)}`)
         .style("left", event.clientX + offsetX + "px")
         .style("top", event.clientY - offsetY + "px");
     })
